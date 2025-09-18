@@ -1,0 +1,1 @@
+import './TopProductsSlider.scss';
