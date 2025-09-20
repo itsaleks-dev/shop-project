@@ -1,18 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import SearchIcon from "../../assets/icons/SearchIcon";
 import UserIcon from "../../assets/icons/UserIcon";
 import CartIcon from "../../assets/icons/CartIcon";
 
 const Userbar = () => (
     <div className="userbar">
-        <div className="src-search">
-            <button className="src-search__cta" aria-label="Пошук">
-                <SearchIcon />
-            </button>
-        </div>
-
-
         <div className="src-user">
             <Link to="/" className="src-user__link" aria-label="Профіль">
                 <UserIcon />

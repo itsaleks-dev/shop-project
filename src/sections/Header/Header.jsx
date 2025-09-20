@@ -1,5 +1,6 @@
 import React from 'react';
-import Burger from "./Burger"
+import BurgerMenu from "../../components/BurgerMenu/BurgerMenu";
+import SearchBar from '../../components/SearchBar/SearchBar';
 import Menu from "./Menu";
 import Logo from "./Logo";
 import Userbar from "./Userbar";
@@ -11,11 +12,14 @@ const Header = () => {
         <section className='container container-header'>
             <header className='content content-header'>
                 <div className='menu-bar'>
-                    <Burger />
+                    <BurgerMenu />
                     <Menu />
                 </div>
                 <Logo />
-                <Userbar />
+                <div className='userbar-wrapper'>
+                    <SearchBar />
+                    <Userbar />
+                </div>
             </header>
         </section>
     );

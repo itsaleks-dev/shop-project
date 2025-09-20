@@ -1,0 +1,92 @@
+@use 'sass:map';
+
+@use '../../assets/styles/common/typography';
+@use '../../assets/styles/common/colors' as vars;
+@use '../../assets/styles/common/mixins' as mixin;
+@use '../../assets/styles/common/breakpoints' as bp;
+
+.content-header {
+    margin-top: 50px;
+    @include mixin.gridHeader;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, md)) {
+        margin-top: 20px;
+    }
+
+    @media (max-width: map.get(bp.$grid-breakpoints, s)) {
+        margin-top: 10px;
+        @include mixin.leftRight;
+    }
+}
+
+.menu-bar {
+    @include mixin.alingCenter;
+}
+
+.burger {
+    display: none;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, md)) {
+        display: block;
+    }
+
+    &__cta {
+        @include mixin.button-Bar;
+    }
+}
+
+.menu {
+    justify-self: start;
+    display: flex;
+    gap: 20px;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, md)) {
+        display: none;
+    }
+
+    &__list {
+        @include mixin.alingCenter;
+        gap: 30px;
+    }
+
+    &__link {
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 1.5px;
+        color: vars.$black;
+    }
+}
+
+.logo {
+    justify-self: center;
+}
+
+.userbar {
+    justify-self: end;
+    display: flex;
+    gap: 18px;
+}
+
+.src-search {
+    @include mixin.alingCenter;
+
+    &__cta {
+        @include mixin.button-Bar;
+    }
+}
+
+.src-user {
+    margin-top: 3px;
+
+    @media (max-width: map.get(bp.$grid-breakpoints, md)) {
+        display: none;
+    }
+}
+
+.src-cart {
+    @include mixin.alingCenter;
+
+    &__cta {
+        @include mixin.button-Bar;
+    }
+}
