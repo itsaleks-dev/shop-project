@@ -5,7 +5,7 @@ import LogoIcon from "../../assets/icons/LogoIcon";
 const Logo = () => (
     <div className="logo">
         <Link to="/" className="logo__link">
-        <LogoIcon />
+            <LogoIcon />
         </Link>
     </div>
 );
