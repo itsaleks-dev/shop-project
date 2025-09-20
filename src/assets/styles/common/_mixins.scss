@@ -1,0 +1,43 @@
+@mixin gridHeader {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+}
+
+@mixin alingCenter {
+    display: flex;
+    align-items: center;
+}
+
+@mixin button-Bar {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin flexColumn {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin flexBetween {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin sliderViewport {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+@mixin leftRight {
+    padding-left: 15px;
+    padding-right: 15px;
+}
