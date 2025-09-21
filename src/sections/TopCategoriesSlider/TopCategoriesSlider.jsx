@@ -1,4 +1,5 @@
 import React, { useRef, useEffect } from 'react';
+import shampooImg from "../../assets/images/newsha.jpg"
 
 import './TopCategoriesSlider.scss';
 
@@ -9,14 +10,14 @@ const CategoriesSlider = () => {
     const firstCardRef = useRef(null);
 
     const categories = [
-        { title: "Шампуні", image: "/assets/images/shampoo.jpg" },
-        { title: "Кондиціонери", image: "/assets/images/conditioner.jpg" },
-        { title: "Стайлінг", image: "/assets/images/styling.jpg" },
-        { title: "Travel size", image: "/assets/images/travel-size.jpg" },
-        { title: "Маски", image: "/assets/images/masque.jpg" },
-        { title: "Олія", image: "/assets/images/oil.jpg" },
-        { title: "Термозахист", image: "/assets/images/protect.jpg" },
-        { title: "Додатковий догляд", image: "/assets/images/frizz.jpg" },
+        { title: "Шампуні", image: shampooImg },
+        { title: "Кондиціонери", image: shampooImg },
+        { title: "Стайлінг", image: shampooImg },
+        { title: "Travel size", image: shampooImg },
+        { title: "Маски", image: shampooImg },
+        { title: "Олія", image: shampooImg },
+        { title: "Термозахист", image: shampooImg },
+        { title: "Додатковий догляд", image: shampooImg },
     ];
 
     useEffect(() => {
@@ -47,10 +48,10 @@ const CategoriesSlider = () => {
             if (e.key === "ArrowRight") scrollByStep(1);
         }
 
-        root.addEventListener("keydowh", handleKey);
+        root.addEventListener("keydown", handleKey);
         root.tabIndex = 0;
 
-        return() => {
+        return () => {
             root.removeEventListener("keydown", handleKey);
         };
     }, []);
@@ -67,19 +68,19 @@ const CategoriesSlider = () => {
                         <div className='categories-slider__track' ref={trackRef}>
                             {categories.map((item, i) => (
                                 <div
-                                className='category'
-                                key={i}
-                                ref={i === 0 ? firstCardRef : null}
+                                    className='category'
+                                    key={i}
+                                    ref={i === 0 ? firstCardRef : null}
                                 >
                                     <a href='#' className='category__link'>
                                         <img
-                                        src={item.image}
-                                        alt={item.title}
-                                        className='category__image'
+                                            src={item.image}
+                                            alt={item.title}
+                                            className='category__image'
                                         />
                                     </a>
                                     <h3 className='category__title'>{item.title}</h3>
-                                    </div>
+                                </div>
                             ))}
                         </div>
                     </div>
@@ -89,4 +90,4 @@ const CategoriesSlider = () => {
     );
 };
 
-export default TopCategoriesSlider;
+export default CategoriesSlider;

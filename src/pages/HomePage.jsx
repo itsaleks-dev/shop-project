@@ -1,2 +1,11 @@
-const HomePage = () => <h1>Demo</h1>;
+import TopCategoriesSlider from "../sections/TopCategoriesSlider/TopCategoriesSlider"; 
+
+function HomePage() {
+    return (
+        <main>
+            <TopCategoriesSlider />
+        </main>
+    );
+}
+
 export default HomePage;

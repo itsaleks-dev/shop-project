@@ -16,7 +16,7 @@ const Header = () => {
                     <Menu />
                 </div>
                 <Logo />
-                <div className='userbar-wrapper'>
+                <div className='userbar'>
                     <SearchBar />
                     <Userbar />
                 </div>
